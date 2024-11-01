@@ -1,28 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | QR code component</title>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        <title>Frontend Mentor | QR code component</title>
 
-  Improve your front-end skills by building projects
+        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+        <style>
+            /* Global Styles */
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                font-family: "Outfit", sans-serif;
+            }
 
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: hsl(212, 45%, 89%);
+                padding: 0 20px; /* Apply 20px left and right padding */
+            }
+
+            /* Card Styles */
+            .card {
+                background-color: hsl(0, 0%, 100%);
+                border-radius: 15px;
+                width: 100%;
+                max-width: 375px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                text-align: center;
+            }
+
+            .qr-section {
+                background-color: hsl(0, 0%, 100%);
+                padding: 20px;
+            }
+
+            .qr-section img {
+                width: 100%;
+                max-width: 250px;
+                border-radius: 10px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .content h2 {
+                font-size: 1.25rem; /* 20px */
+                font-weight: 700;
+                color: hsl(218, 44%, 22%);
+                margin-bottom: 10px;
+            }
+
+            .content p {
+                font-size: 15px;
+                color: hsl(216, 15%, 48%);
+                line-height: 1.6;
+            }
+
+            /* Responsive Adjustments */
+            @media (min-width: 768px) {
+                body {
+                    padding: 0; /* Remove padding for larger screens */
+                }
+
+                .card {
+                    max-width: 400px; /* Adjusts card width for tablets and larger screens */
+                }
+            }
+
+            @media (min-width: 1440px) {
+                .card {
+                    max-width: 375px; /* Resets card width for larger screens */
+                }
+
+                body {
+                    padding: 0; /* Remove padding for larger screens */
+                }
+            }
+
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .attribution a {
+                color: hsl(228, 45%, 44%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="qr-section">
+                <img src="images/image-qr-code.png" alt="QR Code" />
+            </div>
+            <div class="content">
+                <h2>Improve your front-end skills by building projects</h2>
+                <p>
+                    Scan the QR code to visit Frontend Mentor and take your
+                    coding skills to the next level
+                </p>
+            </div>
+        </div>
+
+        <div class="attribution">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by <a href="#">La Vo Minh Quan / mhxx307</a>.
+        </div>
+    </body>
 </html>
